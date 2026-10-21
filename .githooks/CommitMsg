@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git stripspace --strip-comments < "$1" | awk -f "$(dirname "$0")/CommitMsg.awk"
