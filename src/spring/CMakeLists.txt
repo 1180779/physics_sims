@@ -8,7 +8,7 @@ list(REMOVE_ITEM SPRING_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
 # Registers the vendored JetBrains icons + Mono font
 set(SPRING_RESOURCES resources/resources.qrc)
 
-add_library(spring_core ${SPRING_SOURCES} ${SPRING_SOURCES})
+add_library(spring_core ${SPRING_SOURCES})
 
 target_link_libraries(spring_core PUBLIC
         Qt::Core
