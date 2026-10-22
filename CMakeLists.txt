@@ -40,25 +40,26 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(oneTBB)
 
-FetchContent_Declare(
-        Catch2
-        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG v3.5.4
-)
-
 # fetch the custom math library
 FetchContent_Declare(
         cad_math
         GIT_REPOSITORY https://github.com/1180779/cad_math.git
-        GIT_TAG 5e27d4efa50e939ac53f8325e35ed0badbd158e2
+        GIT_TAG v1.0.1
 )
 FetchContent_MakeAvailable(cad_math)
+
+FetchContent_Declare(
+        cad_graphics
+        GIT_REPOSITORY https://github.com/1180779/cad_graphics.git
+        GIT_TAG v1.0.0
+)
+FetchContent_MakeAvailable(cad_graphics)
 
 # fetch the custom qt library with common stuff
 FetchContent_Declare(
         cad_common
         GIT_REPOSITORY https://github.com/1180779/cad_common.git
-        GIT_TAG b68d9e4ad6f5e3616b7888c31c0beef55b63dce4
+        GIT_TAG v1.1.0
 )
 FetchContent_MakeAvailable(cad_common)
 

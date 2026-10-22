@@ -16,6 +16,7 @@ The following libraries are utilized:
 - Catch2 &mdash; testing
 - cad_math (see [the repository](https://github.com/1180779/cad_math) for more details) &mdash; math
 - cad_common (see [the repository](https://github.com/1180779/cad_common) for more details) &mdash; Qt helpers
+- cad_graphics (see [the repository](https://github.com/1180779/cad_graphics) &mdash; graphics/OpenGL infrastructure
 - oneTBB &mdash; dependency for `std::execution`
 - OpenGL &mdash; rendering
 

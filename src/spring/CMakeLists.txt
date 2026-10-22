@@ -17,6 +17,7 @@ target_link_libraries(spring_core PUBLIC
         Qt::OpenGLWidgets
         cad_math::cad_math
         cad_common::cad_common
+        cad_graphics::cad_graphics
         TBB::tbb
 )
 

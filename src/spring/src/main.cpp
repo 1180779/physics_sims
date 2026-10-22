@@ -1,3 +1,5 @@
+#include <cad_graphics/Gl.hxx>
+
 #include <QApplication>
 #include <QTimer>
 
@@ -7,6 +9,8 @@
 #include "SpringWindow.hxx"
 
 int main(int argc, char* argv[]) {
+    cadg::glSetDefaults();
+
     const QApplication app(argc, argv);
     const QStringList args = QApplication::arguments();
     const bool forceDark = args.contains(QStringLiteral("--dark"));

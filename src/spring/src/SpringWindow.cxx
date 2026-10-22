@@ -1,5 +1,6 @@
 #include "SpringWindow.hxx"
 
+#include "SpringViewport.hxx"
 #include "config/SectionConfig.hxx"
 
 #include <QAction>
@@ -18,15 +19,15 @@ SpringWindow::SpringWindow(const PanelsConfigs& panelsConfigs, const SectionsCon
     setWindowFlag(Qt::FramelessWindowHint);
     setAutoFillBackground(true);
 
-    // placeholder central viewport
+    const auto glViewport = new SpringViewport{};
+    
     auto* viewport = new QFrame;
     viewport->setObjectName(QStringLiteral("centralViewport"));
     viewport->setFrameShape(QFrame::NoFrame);
     viewport->setAttribute(Qt::WA_StyledBackground, true);
     viewport->setMinimumSize(400, 300);
     auto* viewportLayout = new QVBoxLayout(viewport);
-    viewportLayout->addWidget(new QLabel(QStringLiteral("Spring visualization"), viewport));
-    viewportLayout->addStretch();
+    viewportLayout->addWidget(glViewport);
 
     m_host = new SectionHost(viewport);
     m_host->setCornerOwner(CornerOwner::HorizontalSides);
